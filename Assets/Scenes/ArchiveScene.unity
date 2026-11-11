@@ -129,6 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 200952145}
   - component: {fileID: 200952144}
+  - component: {fileID: 200952146}
   m_Layer: 0
   m_Name: KeyNPC
   m_TagString: Untagged
@@ -211,6 +212,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &200952146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 200952143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd031c20ea54497bb0e7c67bc917b95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractableObject
+  id: witness_archivist
+  kind: 0
+  displayName: Архивариус
+  energyCost: 25
+  availableDuringDay: 1
+  availableAtNight: 1
+  collectedFlagId: 
+  completionFlagId: talked_to_archivist
+  journalTitle: 
+  journalText: 
 --- !u!1 &300846412
 GameObject:
   m_ObjectHideFlags: 0
@@ -221,6 +244,7 @@ GameObject:
   m_Component:
   - component: {fileID: 300846414}
   - component: {fileID: 300846413}
+  - component: {fileID: 300846415}
   m_Layer: 0
   m_Name: NonKeyNPC
   m_TagString: Untagged
@@ -303,6 +327,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &300846415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 300846412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd031c20ea54497bb0e7c67bc917b95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractableObject
+  id: passerby_archive
+  kind: 1
+  displayName: Сотрудник архива
+  energyCost: 10
+  availableDuringDay: 1
+  availableAtNight: 0
+  collectedFlagId: 
+  completionFlagId: talked_to_passerby_archive
+  journalTitle: 
+  journalText: 
 --- !u!1 &304933709
 GameObject:
   m_ObjectHideFlags: 0
@@ -869,7 +915,13 @@ GameObject:
   - component: {fileID: 1581922831}
   - component: {fileID: 1581922830}
   - component: {fileID: 1581922833}
-  - component: {fileID: 1581922834}
+  - component: {fileID: 1581922835}
+  - component: {fileID: 1581922836}
+  - component: {fileID: 1581922837}
+  - component: {fileID: 1581922838}
+  - component: {fileID: 1581922839}
+  - component: {fileID: 1581922840}
+  - component: {fileID: 1581922841}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -992,7 +1044,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &1581922834
+--- !u!114 &1581922835
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1001,12 +1053,82 @@ MonoBehaviour:
   m_GameObject: {fileID: 1581922829}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5db1eb7dd89240cf92b0b313ffb190db, type: 3}
+  m_Script: {fileID: 11500000, guid: ffe2cd273ea14f0abddca22b868e35f0, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DetectivePrototype
+  m_EditorClassIdentifier: Assembly-CSharp::InteractionSystem
   interactionDistance: 2.25
-  journalKey: 3
-  interactKey: 19
+--- !u!114 &1581922836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581922829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f01108416d9f44a2a4de2fed7373bed4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem
+--- !u!114 &1581922837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581922829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 494a0774f4c946c98b791ce8ecf689c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::JournalSystem
+--- !u!114 &1581922838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581922829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 934e5710ec244c15b7bb52c2083b325e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TimeSystem
+--- !u!114 &1581922839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581922829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1243e78fb1834689bf667741a99ad5b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WorldSystem
+--- !u!114 &1581922840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581922829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de002e3fc8884d6e97e032cb967881c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocationSystem
+--- !u!114 &1581922841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581922829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a67f2c5d46e476aa8681548e1d88504, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIManager
 --- !u!1 &1641053782
 GameObject:
   m_ObjectHideFlags: 0
@@ -1017,6 +1139,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1641053784}
   - component: {fileID: 1641053783}
+  - component: {fileID: 1641053785}
   m_Layer: 0
   m_Name: Item
   m_TagString: Untagged
@@ -1099,6 +1222,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1641053785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1641053782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd031c20ea54497bb0e7c67bc917b95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractableObject
+  id: day_card_ArchiveScene
+  kind: 2
+  displayName: Архивная карточка
+  energyCost: 15
+  availableDuringDay: 1
+  availableAtNight: 0
+  collectedFlagId: item_day_ArchiveScene_collected
+  completionFlagId: 
+  journalTitle: Архивная карточка
+  journalText: На карточке стоит отметка о выдаче ключа после закрытия архива.
 --- !u!1 &1719010958
 GameObject:
   m_ObjectHideFlags: 0
