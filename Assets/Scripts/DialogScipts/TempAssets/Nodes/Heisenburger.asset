@@ -10,10 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c10f6b86cad3e844b44026d76cfb941, type: 3}
-  m_Name: DialogNode
-  m_EditorClassIdentifier: Assembly-CSharp::DialogNode
-  _text: 
-  _choices:
-  - niger
-  - balls
-  <Speaker>k__BackingField: {fileID: 0}
+  m_Name: Heisenburger
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSequenceNode
+  _lines:
+  - <Text>k__BackingField: Heisenburger
+    <Speaker>k__BackingField: {fileID: 11400000, guid: 22bfaa985d7e5dd4eb1c1c07f524189b, type: 2}
+  <NextNode>k__BackingField: {fileID: 0}

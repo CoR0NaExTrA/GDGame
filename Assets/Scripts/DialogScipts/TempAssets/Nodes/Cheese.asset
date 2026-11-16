@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c10f6b86cad3e844b44026d76cfb941, type: 3}
+  m_Name: Cheese
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSequenceNode
+  _lines:
+  - <Text>k__BackingField: Cheese
+    <Speaker>k__BackingField: {fileID: 11400000, guid: a1c7d120fc7443846a77d57c49f700d1, type: 2}
+  <NextNode>k__BackingField: {fileID: 0}

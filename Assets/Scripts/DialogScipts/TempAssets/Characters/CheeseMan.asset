@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 790e4ecb957b6344ba529320d5f2c874, type: 3}
-  m_Name: Niha
+  m_Name: CheeseMan
   m_EditorClassIdentifier: Assembly-CSharp::CharacterData
-  _name: Niha
-  _portrait: {fileID: 8206290616518711653, guid: ceca66dbed5e64c439e3b859006d7d2d, type: 3}
-  _talkSfx: {fileID: 8300000, guid: f6fcd5d005f38ee4f97a0b9fb5be5614, type: 3}
+  _name: Cheese Man
+  _portrait: {fileID: 21300000, guid: 2ed9558e640ea7f4d9a236b2094daad8, type: 3}
+  _talkSfx: {fileID: 8300000, guid: 3d3cac994aa9c7048a441efe768d97cf, type: 3}

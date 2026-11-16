@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bc19e6b2fdee074f83aa35ee9ac1776, type: 3}
+  m_Name: Hamburger_choices
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueChoiceNode
+  _choices:
+  - <Text>k__BackingField: Bun
+    <NextNode>k__BackingField: {fileID: 11400000, guid: fc9b3bb5811eb9d4b97f35f42dfb224f, type: 2}
+  - <Text>k__BackingField: Sauce
+    <NextNode>k__BackingField: {fileID: 11400000, guid: fc9b3bb5811eb9d4b97f35f42dfb224f, type: 2}
+  - <Text>k__BackingField: Patty
+    <NextNode>k__BackingField: {fileID: 11400000, guid: fc9b3bb5811eb9d4b97f35f42dfb224f, type: 2}
+  - <Text>k__BackingField: Cheese
+    <NextNode>k__BackingField: {fileID: 11400000, guid: 9f2208b1e425fcf44b6a8eb7671fdad7, type: 2}
+  - <Text>k__BackingField: Tomato
+    <NextNode>k__BackingField: {fileID: 11400000, guid: fc9b3bb5811eb9d4b97f35f42dfb224f, type: 2}
+  - <Text>k__BackingField: Letuce
+    <NextNode>k__BackingField: {fileID: 11400000, guid: fc9b3bb5811eb9d4b97f35f42dfb224f, type: 2}
+  - <Text>k__BackingField: Bun
+    <NextNode>k__BackingField: {fileID: 11400000, guid: fc9b3bb5811eb9d4b97f35f42dfb224f, type: 2}
